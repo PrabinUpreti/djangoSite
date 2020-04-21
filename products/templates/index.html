@@ -13,9 +13,8 @@
         {% for product in products %}
 
         <div class="col">
-            <div class="card" style="width: auto;">
-                <img  src="{{ product.image_url }}" class="card-img-top"
-                     alt="{{ product.name }}">
+            <div class="card" style="width: 15rem; margin-bottom:20px; box-shadow: 10px 10px 5px #aaaaaa;">
+                <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p class="card-text">(Rs {{ product.price }} /kg)</p>
