@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content%}
+<nav class="nav">
+    <a class="nav-link active" href="#">
+        PyShops
+    </a>
+</nav>
+<div class="container">
+
+    <h3>Products</h3>
+
+    <div class="row">
+        {% for product in products %}
+
+        <div class="col">
+            <div class="card" style="width: auto;">
+                <img  src="{{ product.image_url }}" class="card-img-top"
+                     alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">(Rs {{ product.price }} /kg)</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}
